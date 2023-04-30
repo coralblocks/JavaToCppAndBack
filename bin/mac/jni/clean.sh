@@ -1,6 +1,6 @@
 #!/bin/bash
 
 rm -rf classes/com
-rm -f lib/jni/*
+rm -rf lib
 rm -f src/main/c/*.h
 
