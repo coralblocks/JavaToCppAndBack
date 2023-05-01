@@ -4,5 +4,6 @@
 ./bin/mac/jna/clean.sh
 ./bin/mac/jnr/clean.sh
 ./bin/mac/graal/clean.sh
+./bin/mac/jni_jvm/clean.sh
 
 
