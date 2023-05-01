@@ -62,7 +62,7 @@ Hello CoralBlocks from JNI! => Awesome
 Hello CoralBlocks from JNI! => Awesome
 ```
 
-### JNA
+### [JNA](https://github.com/java-native-access/jna)
 - Check the [Java code](https://github.com/coralblocks/JavaToCppAndBack/blob/main/src/main/java/com/coralblocks/javatocppandback/jna/HelloWorld.java)
 - Check the [C++ code](https://github.com/coralblocks/JavaToCppAndBack/blob/main/src/main/c/com_coralblocks_javatocppandback_jna_HelloWorld.cpp)
 ###### MacOS
@@ -84,6 +84,30 @@ Hello CoralBlocks from JNA! => Awesome
 $ ./bin/linux/jna/all.sh 2 Awesome
 Hello CoralBlocks from JNA! => Awesome
 Hello CoralBlocks from JNA! => Awesome
+```
+
+### [JNR](https://github.com/jnr/jnr-ffi)
+- Check the [Java code](https://github.com/coralblocks/JavaToCppAndBack/blob/main/src/main/java/com/coralblocks/javatocppandback/jnr/HelloWorld.java)
+- Check the [C++ code](https://github.com/coralblocks/JavaToCppAndBack/blob/main/src/main/c/com_coralblocks_javatocppandback_jnr_HelloWorld.cpp)
+###### MacOS
+- [Compile](https://github.com/coralblocks/JavaToCppAndBack/blob/main/bin/mac/jnr/compileJava.sh) the Java code
+- [Compile](https://github.com/coralblocks/JavaToCppAndBack/blob/main/bin/mac/jnr/compileCpp.sh) the C++ code
+- [Run](https://github.com/coralblocks/JavaToCppAndBack/blob/main/bin/mac/jnr/runJava.sh) the Java code
+```
+# For Mac
+$ ./bin/mac/jnr/all.sh 2 Awesome
+Hello CoralBlocks from JNR! => Awesome
+Hello CoralBlocks from JNR! => Awesome
+```
+###### Linux
+- [Compile](https://github.com/coralblocks/JavaToCppAndBack/blob/main/bin/linux/jnr/compileJava.sh) the Java code
+- [Compile](https://github.com/coralblocks/JavaToCppAndBack/blob/main/bin/linux/jnr/compileCpp.sh) the C++ code
+- [Run](https://github.com/coralblocks/JavaToCppAndBack/blob/main/bin/linux/jnr/runJava.sh) the Java code
+```
+# For Linux
+$ ./bin/linux/jnr/all.sh 2 Awesome
+Hello CoralBlocks from JNR! => Awesome
+Hello CoralBlocks from JNR! => Awesome
 ```
 
 
