@@ -1,7 +1,7 @@
 # JavaToCppAndBack
 Call Java from C++ and C++ from Java with a variety of old and new projects like JNI, JNA, JNR, GraalVM Native-Image, etc.
 
-This project is intended to be used as a quick reference on how to get going with Java to C++ integration, from both sides. It is a step-by-step guide, in the form of shell scripts (for Linux and MacOS) to compile and run the C++ and Java examples, so you don't have to guess anything. Just read "Hello World!" in your terminal and celebrate! :champagne: :tada: :confetti_ball:
+This project is intended to be used as a quick reference on how to get going with Java to C++ integration, from both sides. It is a _step-by-step_ guide, in the form of shell scripts (for Linux and MacOS) to compile and run the C++ and Java examples, so you don't have to guess anything. Just see "_Hello World!_" popping up in your terminal to celebrate! :champagne: :tada: :confetti_ball:
 
 #### MacOS
 ```
@@ -142,7 +142,7 @@ Hello CoralBlocks from JNI-JVM! => Awesome
 Hello CoralBlocks from JNI-JVM! => Awesome
 ```
 
-### GraalVM
+### [GraalVM](https://www.graalvm.org)
 - Check the [Java code](https://github.com/coralblocks/JavaToCppAndBack/blob/main/src/main/java/com/coralblocks/javatocppandback/graal/HelloWorld.java)
 - Check the [C++ code](https://github.com/coralblocks/JavaToCppAndBack/blob/main/src/main/c/com_coralblocks_javatocppandback_graal_HelloWorld.cpp)
 ###### MacOS
