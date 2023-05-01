@@ -3,22 +3,6 @@ Call Java from C++ and C++ from Java with a variety of old and new projects like
 
 This project is intended to be used as a quick reference on how to get going with Java to C++ integration, from both sides. It is a step-by-step guide, in the form of shell scripts (for Linux and MacOS) to compile and run the C++ and Java examples, so you don't have to guess anything. Just read "Hello World!" in your terminal and celebrate! :champagne: :tada: :confetti_ball:
 
-#### Linux
-```
-$ uname -a
-Linux cleveland 5.15.0-71-generic #78-Ubuntu SMP Tue Apr 18 09:00:08 UTC 2023 aarch64 aarch64 aarch64 GNU/Linux
-
-$ cat /etc/issue | head -n 1
-Ubuntu 22.04.2 LTS \n \l
-
-$ java -version
-openjdk version "19.0.2" 2023-01-17
-OpenJDK Runtime Environment GraalVM CE 22.3.1 (build 19.0.2+7-jvmci-22.3-b12)
-OpenJDK 64-Bit Server VM GraalVM CE 22.3.1 (build 19.0.2+7-jvmci-22.3-b12, mixed mode, sharing)
-
-$ g++ --version | head -n 1
-g++ (Ubuntu 11.3.0-1ubuntu1~22.04) 11.3.0
-```
 #### MacOS
 ```
 $ uname -a
@@ -34,6 +18,28 @@ Apple clang version 14.0.3 (clang-1403.0.22.14.1)
 Target: arm64-apple-darwin22.4.0
 Thread model: posix
 InstalledDir: /Library/Developer/CommandLineTools/usr/bin
+
+$ native-image --version
+GraalVM 22.3.1 Java 19 CE (Java Version 19.0.2+7-jvmci-22.3-b12)
+```
+#### Linux
+```
+$ uname -a
+Linux cleveland 5.15.0-71-generic #78-Ubuntu SMP Tue Apr 18 09:00:08 UTC 2023 aarch64 aarch64 aarch64 GNU/Linux
+
+$ cat /etc/issue | head -n 1
+Ubuntu 22.04.2 LTS \n \l
+
+$ java -version
+openjdk version "19.0.2" 2023-01-17
+OpenJDK Runtime Environment GraalVM CE 22.3.1 (build 19.0.2+7-jvmci-22.3-b12)
+OpenJDK 64-Bit Server VM GraalVM CE 22.3.1 (build 19.0.2+7-jvmci-22.3-b12, mixed mode, sharing)
+
+$ g++ --version | head -n 1
+g++ (Ubuntu 11.3.0-1ubuntu1~22.04) 11.3.0
+
+$ native-image --version
+GraalVM 22.3.1 Java 19 CE (Java Version 19.0.2+7-jvmci-22.3-b12)
 ```
 
 ## Java calling C++
@@ -134,4 +140,30 @@ Hello CoralBlocks from JNI-JVM! => Awesome
 $ ./bin/linux/jni_jvm/all.sh 2 Awesome
 Hello CoralBlocks from JNI-JVM! => Awesome
 Hello CoralBlocks from JNI-JVM! => Awesome
+```
+
+### GraalVM
+- Check the [Java code](https://github.com/coralblocks/JavaToCppAndBack/blob/main/src/main/java/com/coralblocks/javatocppandback/graal/HelloWorld.java)
+- Check the [C++ code](https://github.com/coralblocks/JavaToCppAndBack/blob/main/src/main/c/com_coralblocks_javatocppandback_graal_HelloWorld.cpp)
+###### MacOS
+- [Compile](https://github.com/coralblocks/JavaToCppAndBack/blob/main/bin/mac/graal/compileJava.sh) the Java code
+- [Generate](https://github.com/coralblocks/JavaToCppAndBack/blob/main/bin/mac/graal/nativeImage.sh) the native image
+- [Compile](https://github.com/coralblocks/JavaToCppAndBack/blob/main/bin/mac/graal/compileCpp.sh) the C++ code
+- [Run](https://github.com/coralblocks/JavaToCppAndBack/blob/main/bin/mac/graal/runCpp.sh) the C++ code
+```
+# For Mac
+$ ./bin/mac/graal/all.sh 2 Awesome
+Hello CoralBlocks from GraalVM Native-Image! => Awesome
+Hello CoralBlocks from GraalVM Native-Image! => Awesome
+```
+###### Linux
+- [Compile](https://github.com/coralblocks/JavaToCppAndBack/blob/main/bin/linux/graal/compileJava.sh) the Java code
+- [Generate](https://github.com/coralblocks/JavaToCppAndBack/blob/main/bin/linux/graal/nativeImage.sh) the native image
+- [Compile](https://github.com/coralblocks/JavaToCppAndBack/blob/main/bin/linux/graal/compileCpp.sh) the C++ code
+- [Run](https://github.com/coralblocks/JavaToCppAndBack/blob/main/bin/linux/graal/runCpp.sh) the C++ code
+```
+# For Linux
+$ ./bin/linux/graal/all.sh 2 Awesome
+Hello CoralBlocks from GraalVM Native-Image! => Awesome
+Hello CoralBlocks from GraalVM Native-Image! => Awesome
 ```
