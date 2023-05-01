@@ -110,4 +110,28 @@ Hello CoralBlocks from JNR! => Awesome
 Hello CoralBlocks from JNR! => Awesome
 ```
 
+## C++ calling Java
 
+### JNI
+- Check the [Java code](https://github.com/coralblocks/JavaToCppAndBack/blob/main/src/main/java/com/coralblocks/javatocppandback/jni_jvm/HelloWorld.java)
+- Check the [C++ code](https://github.com/coralblocks/JavaToCppAndBack/blob/main/src/main/c/com_coralblocks_javatocppandback_jni_jvm_HelloWorld.cpp)
+###### MacOS
+- [Compile](https://github.com/coralblocks/JavaToCppAndBack/blob/main/bin/mac/jni_jvm/compileJava.sh) the Java code
+- [Compile](https://github.com/coralblocks/JavaToCppAndBack/blob/main/bin/mac/jni_jvm/compileCpp.sh) the C++ code
+- [Run](https://github.com/coralblocks/JavaToCppAndBack/blob/main/bin/mac/jni_jvm/runCpp.sh) the C++ code
+```
+# For Mac
+$ ./bin/mac/jni_jvm/all.sh 2 Awesome
+Hello CoralBlocks from JNI-JVM! => Awesome
+Hello CoralBlocks from JNI-JVM! => Awesome
+```
+###### Linux
+- [Compile](https://github.com/coralblocks/JavaToCppAndBack/blob/main/bin/linux/jni_jvm/compileJava.sh) the Java code
+- [Compile](https://github.com/coralblocks/JavaToCppAndBack/blob/main/bin/linux/jni_jvm/compileCpp.sh) the C++ code
+- [Run](https://github.com/coralblocks/JavaToCppAndBack/blob/main/bin/linux/jni_jvm/runCpp.sh) the C++ code
+```
+# For Linux
+$ ./bin/linux/jni_jvm/all.sh 2 Awesome
+Hello CoralBlocks from JNI-JVM! => Awesome
+Hello CoralBlocks from JNI-JVM! => Awesome
+```
