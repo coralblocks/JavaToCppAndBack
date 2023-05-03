@@ -167,3 +167,34 @@ $ ./bin/linux/graal/all.sh 2 Awesome
 Hello CoralBlocks from GraalVM Native-Image! => Awesome
 Hello CoralBlocks from GraalVM Native-Image! => Awesome
 ```
+
+## C++ calling Java which calls back C++
+
+### JNI
+- Check the [Java code](https://github.com/coralblocks/JavaToCppAndBack/blob/main/src/main/java/com/coralblocks/javatocppandback/jni_callback/CallbackFromJava.java)
+- Check the [C++ code](https://github.com/coralblocks/JavaToCppAndBack/blob/main/src/main/c/com_coralblocks_javatocppandback_jni_callback_CallbackFromJava.cpp) that calls Java
+- Check the [C++ code](https://github.com/coralblocks/JavaToCppAndBack/blob/main/src/main/c/com_coralblocks_javatocppandback_jni_callback_CallbackFromJavaSharedLib.cpp) that receives the callbacks from Java
+- Check the [C++ code](https://github.com/coralblocks/JavaToCppAndBack/blob/main/src/main/c/com_coralblocks_javatocppandback_jni_callback_CallbackFromJavaSharedLib.h) header file for the C++ code above
+###### MacOS
+- [Compile](https://github.com/coralblocks/JavaToCppAndBack/blob/main/bin/mac/jni_callback/compileJava.sh) the Java code
+- [Compile](https://github.com/coralblocks/JavaToCppAndBack/blob/main/bin/mac/jni_callback/compileCpp.sh) the C++ code
+- [Run](https://github.com/coralblocks/JavaToCppAndBack/blob/main/bin/mac/jni_callback/runCpp.sh) the C++ code
+```
+# For Mac
+$ ./bin/mac/jni_callback/all.sh 2
+Received callback from Java: 1683119040946
+Received callback from Java: 1683119040947
+Join returned, exiting C++ code...
+```
+###### Linux
+- [Compile](https://github.com/coralblocks/JavaToCppAndBack/blob/main/bin/linux/jni_callback/compileJava.sh) the Java code
+- [Compile](https://github.com/coralblocks/JavaToCppAndBack/blob/main/bin/linux/jni_callback/compileCpp.sh) the C++ code
+- [Run](https://github.com/coralblocks/JavaToCppAndBack/blob/main/bin/linux/jni_callback/runCpp.sh) the C++ code
+```
+# For Linux
+$ ./bin/linux/jni_callback/all.sh 2
+Received callback from Java: 1683119062956
+Received callback from Java: 1683119062957
+Join returned, exiting C++ code...
+```
+
