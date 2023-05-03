@@ -5,5 +5,6 @@
 ./bin/mac/jnr/clean.sh
 ./bin/mac/graal/clean.sh
 ./bin/mac/jni_jvm/clean.sh
+./bin/mac/jni_callback/clean.sh
 
 
