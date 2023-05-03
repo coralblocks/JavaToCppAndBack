@@ -6,21 +6,21 @@ public class CallbackFromJava {
         System.loadLibrary("CallbackFromJavaSharedLib");
     }
 
-    private final int periodInMillis;
+    private final int count;
     private final Thread thread;
     private volatile boolean isRunning = true;
 
-    public CallbackFromJava(int periodInMillis) {
-        this.periodInMillis = periodInMillis;
+    public CallbackFromJava(int count) {
+        this.count = count;
         this.thread = new Thread(new Runnable() {
             @Override
             public void run() {
                 try {
                     int count = 0;
                     while(isRunning) {
-                        Thread.sleep(periodInMillis);
+                        Thread.sleep(1);
                         hiFromJava(System.currentTimeMillis());
-                        if (++count == 5) break;
+                        if (++count == CallbackFromJava.this.count) break;
                     }
                 } catch(InterruptedException e) {
                     // wants to exit...
