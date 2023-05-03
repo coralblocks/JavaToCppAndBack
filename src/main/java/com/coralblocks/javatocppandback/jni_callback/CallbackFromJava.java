@@ -2,6 +2,10 @@ package com.coralblocks.javatocppandback.jni_callback;
 
 public class CallbackFromJava {
 
+    static {
+        System.loadLibrary("CallbackFromJavaSharedLib");
+    }
+
     private final int periodInMillis;
     private final Thread thread;
     private volatile boolean isRunning = true;
@@ -15,8 +19,7 @@ public class CallbackFromJava {
                     int count = 0;
                     while(isRunning) {
                         Thread.sleep(periodInMillis);
-                        //hiFromJava(System.currentTimeMillis());
-                        System.out.println(count);
+                        hiFromJava(System.currentTimeMillis());
                         if (++count == 5) break;
                     }
                 } catch(InterruptedException e) {
@@ -34,5 +37,5 @@ public class CallbackFromJava {
         isRunning = false;
     }
 
-    //public native void hiFromJava(long l);
+    public native void hiFromJava(long l);
 }

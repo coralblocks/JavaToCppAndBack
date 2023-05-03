@@ -2,5 +2,5 @@
 
 rm -f CallbackFromJava
 rm -rf classes/com
-rm -f src/main/c/*.h
+#rm -f src/main/c/*.h
 
