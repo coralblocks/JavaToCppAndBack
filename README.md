@@ -13,7 +13,7 @@ openjdk version "19.0.2" 2023-01-17
 OpenJDK Runtime Environment GraalVM CE 22.3.1 (build 19.0.2+7-jvmci-22.3-b12)
 OpenJDK 64-Bit Server VM GraalVM CE 22.3.1 (build 19.0.2+7-jvmci-22.3-b12, mixed mode, sharing)
 
-$ g++ --version
+$ clang++ --version
 Apple clang version 14.0.3 (clang-1403.0.22.14.1)
 Target: arm64-apple-darwin22.4.0
 Thread model: posix
@@ -35,8 +35,11 @@ openjdk version "19.0.2" 2023-01-17
 OpenJDK Runtime Environment GraalVM CE 22.3.1 (build 19.0.2+7-jvmci-22.3-b12)
 OpenJDK 64-Bit Server VM GraalVM CE 22.3.1 (build 19.0.2+7-jvmci-22.3-b12, mixed mode, sharing)
 
-$ g++ --version | head -n 1
-g++ (Ubuntu 11.3.0-1ubuntu1~22.04) 11.3.0
+$ clang++ --version
+Ubuntu clang version 14.0.0-1ubuntu1
+Target: aarch64-unknown-linux-gnu
+Thread model: posix
+InstalledDir: /usr/bin
 
 $ native-image --version
 GraalVM 22.3.1 Java 19 CE (Java Version 19.0.2+7-jvmci-22.3-b12)
