@@ -18,7 +18,7 @@ public class CallbackFromJava {
                 try {
                     int count = 0;
                     while(isRunning) {
-                        Thread.sleep(1);
+                        Thread.sleep(100);
                         hiFromJava(System.currentTimeMillis());
                         if (++count == CallbackFromJava.this.count) break;
                     }

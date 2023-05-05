@@ -38,17 +38,19 @@ int main(int argc, char **argv) {
     jmethodID startMethod = env->GetMethodID(callbackFromJavaClass, "start", "()V");
     env->CallVoidMethod(callbackFromJavaObject, startMethod);
 
+    // NOTE: That is actually not needed as the DestroyJavaVM method will wait for the thread to die... (unless it is a daemon thread)
+    //
     // Thread started, now join on this thread...
-    jfieldID callbackFromJavaThreadField = env->GetFieldID(callbackFromJavaClass, "thread", "Ljava/lang/Thread;");
-    jobject callbackFromJavaThreadObject = env->GetObjectField(callbackFromJavaObject, callbackFromJavaThreadField);
-    jclass threadClass = env->GetObjectClass(callbackFromJavaThreadObject);
-    jmethodID joinMethod = env->GetMethodID(threadClass, "join", "()V");
-    env->CallVoidMethod(callbackFromJavaThreadObject, joinMethod);
-
-    cout << "Join returned, exiting C++ code..." << endl;
+    // jfieldID callbackFromJavaThreadField = env->GetFieldID(callbackFromJavaClass, "thread", "Ljava/lang/Thread;");
+    // jobject callbackFromJavaThreadObject = env->GetObjectField(callbackFromJavaObject, callbackFromJavaThreadField);
+    // jclass threadClass = env->GetObjectClass(callbackFromJavaThreadObject);
+    // jmethodID joinMethod = env->GetMethodID(threadClass, "join", "()V");
+    // env->CallVoidMethod(callbackFromJavaThreadObject, joinMethod);
+    //
+    // cout << "Join returned, exiting C++ code..." << endl;
 
     // Release the JVM
-    jvm->DestroyJavaVM();
+    jvm->DestroyJavaVM(); // this will wait for Java threads to die...
 
     return 0;
 }
