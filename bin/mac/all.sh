@@ -6,4 +6,5 @@
 ./bin/mac/graal/all.sh $1 $2
 ./bin/mac/jni_jvm/all.sh $1 $2
 ./bin/mac/jni_callback/all.sh $1
+./bin/mac/jni_bind/all.sh $1
 
