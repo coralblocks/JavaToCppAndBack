@@ -30,7 +30,7 @@ JNIEXPORT void JNICALL Java_com_coralblocks_javatocppandback_jni_1bind_HelloWorl
     env->CallVoidMethod(helloWorldObj, sayHelloMethod, x, msg);
     */
 
-   // using JNI-BIND:
+   // using JNI-BIND: Note that this can be defined globally only once...
    static constexpr jni::Class kClass {
       "com/coralblocks/javatocppandback/jni_bind/HelloWorld",
       jni::Method {
@@ -39,8 +39,11 @@ JNIEXPORT void JNICALL Java_com_coralblocks_javatocppandback_jni_1bind_HelloWorl
           jni::Params < jint , jstring> {}
       }
     };
+
     jni::LocalObject < kClass > helloWorld {}; // Constructs new instance.
     helloWorld("sayHello", x, msg);
+
+    // no need to release the JNI-Bind instance...
 }
 
 

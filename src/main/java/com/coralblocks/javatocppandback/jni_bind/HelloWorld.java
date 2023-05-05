@@ -20,6 +20,6 @@ public class HelloWorld {
         int count = Integer.parseInt(args[0]);
         String msg = args[1];
         goToNativeSide(count, msg);
-        tearDownJvm();
+        tearDownJvm(); // for JNI-Bind, this is necessary to avoid an exception when the JVM exits...
     }
 }
