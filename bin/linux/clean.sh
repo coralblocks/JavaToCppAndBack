@@ -6,4 +6,5 @@
 ./bin/linux/graal/clean.sh
 ./bin/linux/jni_jvm/clean.sh
 ./bin/linux/jni_callback/clean.sh
+./bin/linux/jni_bind/clean.sh
 
