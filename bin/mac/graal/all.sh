@@ -5,5 +5,6 @@
 ./bin/mac/graal/nativeImage.sh
 ./bin/mac/graal/compileCpp.sh
 ./bin/mac/graal/runCpp.sh $1 $2
+./bin/mac/graal/clean.sh
 
 

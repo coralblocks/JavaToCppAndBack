@@ -5,5 +5,6 @@
 ./bin/linux/graal/nativeImage.sh
 ./bin/linux/graal/compileCpp.sh
 ./bin/linux/graal/runCpp.sh $1 $2
+./bin/linux/graal/clean.sh
 
 
