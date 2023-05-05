@@ -231,7 +231,7 @@ Hello CoralBlocks from JNI-Bind! => Awesome
 Hello CoralBlocks from JNI-Bind! => Awesome
 ```
 
-##### JNI x JNI-Bind
+##### Pure JNI x JNI-Bind
 
 ###### Pure JNI:
 ```c++
