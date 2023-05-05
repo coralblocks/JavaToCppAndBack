@@ -1,5 +1,5 @@
 # JavaToCppAndBack
-Call Java from C++ and C++ from Java with a variety of old and new projects like JNI, JNA, JNR, GraalVM, etc.
+Call Java from C++ and C++ from Java with a variety of old and new projects like JNI, JNA, JNR, GraalVM, JNI-BIND, etc.
 
 This project is intended to be used as a quick reference on how to get going with Java and C++ integration, from both sides. It is a _step-by-step_ guide, in the form of shell scripts (for Linux and MacOS) to compile and run the C++ and Java examples, so you don't have to guess anything. Just see "_Hello World!_" popping up in your terminal to celebrate! :champagne: :tada: :confetti_ball:
 
@@ -199,5 +199,35 @@ $ ./bin/linux/jni_callback/all.sh 2
 Received callback from Java: 1683119062956
 Received callback from Java: 1683119062957
 Join returned, exiting C++ code...
+```
+
+## Java calling C++ which calls Java
+
+### [JNI-BIND](https://github.com/google/jni-bind)
+- Check the [Java code](https://github.com/coralblocks/JavaToCppAndBack/blob/main/src/main/java/com/coralblocks/javatocppandback/jni_bind/HelloWorld.java)
+- Check the [C++ code](https://github.com/coralblocks/JavaToCppAndBack/blob/main/src/main/c/com_coralblocks_javatocppandback_jni_bind_HelloWorld.cpp)
+###### MacOS
+- [Compile](https://github.com/coralblocks/JavaToCppAndBack/blob/main/bin/mac/jni_bind/compileJava.sh) the Java code
+- [Compile](https://github.com/coralblocks/JavaToCppAndBack/blob/main/bin/mac/jni_bind/compileCpp.sh) the C++ code
+- [Run](https://github.com/coralblocks/JavaToCppAndBack/blob/main/bin/mac/jni_bind/runCpp.sh) the C++ code
+```
+# For Mac
+$ ./bin/mac/jni_bind/all.sh 2 Awesome
+Hello CoralBlocks from JNI-Bind! => Awesome
+Hello CoralBlocks from JNI-Bind! => Awesome
+```
+###### Linux
+**NOTE:** For Linux make sure you have **libc++-dev** and **libc++abi-dev** intalled.
+
+&nbsp;&nbsp;&nbsp;&nbsp;`sudo apt-get install libc++-dev libc++abi-dev`
+
+- [Compile](https://github.com/coralblocks/JavaToCppAndBack/blob/main/bin/linux/jni_bind/compileJava.sh) the Java code
+- [Compile](https://github.com/coralblocks/JavaToCppAndBack/blob/main/bin/linux/jni_bind/compileCpp.sh) the C++ code
+- [Run](https://github.com/coralblocks/JavaToCppAndBack/blob/main/bin/linux/jni_bind/runCpp.sh) the C++ code
+```
+# For Linux
+$ ./bin/linux/jni_callback/all.sh 2
+Hello CoralBlocks from JNI-Bind! => Awesome
+Hello CoralBlocks from JNI-Bind! => Awesome
 ```
 
