@@ -226,8 +226,33 @@ Hello CoralBlocks from JNI-Bind! => Awesome
 - [Run](https://github.com/coralblocks/JavaToCppAndBack/blob/main/bin/linux/jni_bind/runJava.sh) the Java code
 ```
 # For Linux
-$ ./bin/linux/jni_callback/all.sh 2
+$ ./bin/linux/jni_bind/all.sh 2 Awesome
 Hello CoralBlocks from JNI-Bind! => Awesome
 Hello CoralBlocks from JNI-Bind! => Awesome
 ```
 
+##### JNI x JNI-Bind
+
+###### Pure JNI:
+```c++
+jclass helloWorldClass = env->FindClass("com/coralblocks/javatocppandback/jni_bind/HelloWorld");
+jmethodID helloWorldConstructor = env->GetMethodID(helloWorldClass, "<init>", "()V");
+jobject helloWorldObj = env->NewObject(helloWorldClass, helloWorldConstructor);
+jmethodID sayHelloMethod = env->GetMethodID(helloWorldClass, "sayHello", "(ILjava/lang/String;)V");
+env->CallVoidMethod(helloWorldObj, sayHelloMethod, x, msg);
+```
+
+###### JNI-Bind:
+```c++
+static constexpr jni::Class kClass {
+    "com/coralblocks/javatocppandback/jni_bind/HelloWorld",
+    jni::Method {
+        "sayHello",
+        jni::Return < void > {},
+        jni::Params < jint , jstring> {}
+    }
+};
+
+jni::LocalObject < kClass > helloWorld {}; // Constructs new instance.
+helloWorld("sayHello", x, msg);
+```
