@@ -209,7 +209,7 @@ Join returned, exiting C++ code...
 ###### MacOS
 - [Compile](https://github.com/coralblocks/JavaToCppAndBack/blob/main/bin/mac/jni_bind/compileJava.sh) the Java code
 - [Compile](https://github.com/coralblocks/JavaToCppAndBack/blob/main/bin/mac/jni_bind/compileCpp.sh) the C++ code
-- [Run](https://github.com/coralblocks/JavaToCppAndBack/blob/main/bin/mac/jni_bind/runCpp.sh) the C++ code
+- [Run](https://github.com/coralblocks/JavaToCppAndBack/blob/main/bin/mac/jni_bind/runJava.sh) the Java code
 ```
 # For Mac
 $ ./bin/mac/jni_bind/all.sh 2 Awesome
@@ -217,13 +217,13 @@ Hello CoralBlocks from JNI-Bind! => Awesome
 Hello CoralBlocks from JNI-Bind! => Awesome
 ```
 ###### Linux
-**NOTE:** For Linux make sure you have **libc++-dev** and **libc++abi-dev** intalled.
+**NOTE:** For Linux make sure you have **libc++-dev** and **libc++abi-dev** installed.
 
 &nbsp;&nbsp;&nbsp;&nbsp;`sudo apt-get install libc++-dev libc++abi-dev`
 
 - [Compile](https://github.com/coralblocks/JavaToCppAndBack/blob/main/bin/linux/jni_bind/compileJava.sh) the Java code
 - [Compile](https://github.com/coralblocks/JavaToCppAndBack/blob/main/bin/linux/jni_bind/compileCpp.sh) the C++ code
-- [Run](https://github.com/coralblocks/JavaToCppAndBack/blob/main/bin/linux/jni_bind/runCpp.sh) the C++ code
+- [Run](https://github.com/coralblocks/JavaToCppAndBack/blob/main/bin/linux/jni_bind/runJava.sh) the Java code
 ```
 # For Linux
 $ ./bin/linux/jni_callback/all.sh 2
