@@ -2,10 +2,8 @@
 #include <jni.h>
 #include "com_coralblocks_javatocppandback_jni_callback_CallbackFromJavaSharedLib.h"
 
-using namespace std;
-
 void hi_from_java(long l) {
-    cout << "Received callback from Java: " << l << endl;
+    std::cout << "Received callback from Java: " << l << std::endl;
 }
 
 int main(int argc, char **argv) {

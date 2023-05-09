@@ -1,8 +1,6 @@
 #include <iostream>
 #include <jni.h>
 
-using namespace std;
-
 int main(int argc, char **argv) {
 
     int x = std::stoi(argv[1]);
