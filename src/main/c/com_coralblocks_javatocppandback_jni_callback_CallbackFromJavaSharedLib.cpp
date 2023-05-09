@@ -13,5 +13,11 @@ JNIEXPORT void JNICALL Java_com_coralblocks_javatocppandback_jni_1callback_Callb
   (JNIEnv *env, jobject obj, jlong l) {
     if (g_callback) {
         g_callback((long) l); // invoke the callback function
+    } else {
+        jclass exceptionClass = env->FindClass("java/lang/RuntimeException");
+        if (exceptionClass) {
+            env->ThrowNew(exceptionClass, "Callback was not set!");
+        }
     }
 }
+
