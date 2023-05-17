@@ -47,7 +47,7 @@ GraalVM 22.3.1 Java 19 CE (Java Version 19.0.2+7-jvmci-22.3-b12)
 
 ## Java calling C++
 
-### JNI
+### [JNI](https://docs.oracle.com/javase/8/docs/technotes/guides/jni/spec/jniTOC.html)
 - Check the [Java code](https://github.com/coralblocks/JavaToCppAndBack/blob/main/src/main/java/com/coralblocks/javatocppandback/jni/HelloWorld.java)
 - Check the [C++ code](https://github.com/coralblocks/JavaToCppAndBack/blob/main/src/main/c/com_coralblocks_javatocppandback_jni_HelloWorld.cpp)
 ###### MacOS
@@ -121,7 +121,7 @@ Hello CoralBlocks from JNR! => Awesome
 
 ## C++ calling Java
 
-### JNI
+### [JNI](https://docs.oracle.com/javase/8/docs/technotes/guides/jni/spec/invocation.html)
 - Check the [Java code](https://github.com/coralblocks/JavaToCppAndBack/blob/main/src/main/java/com/coralblocks/javatocppandback/jni_jvm/HelloWorld.java)
 - Check the [C++ code](https://github.com/coralblocks/JavaToCppAndBack/blob/main/src/main/c/com_coralblocks_javatocppandback_jni_jvm_HelloWorld.cpp)
 ###### MacOS
@@ -173,7 +173,7 @@ Hello CoralBlocks from GraalVM Native-Image! => Awesome
 
 ## C++ calling Java which calls back C++
 
-### JNI
+### [JNI](https://docs.oracle.com/javase/8/docs/technotes/guides/jni/spec/invocation.html)
 - Check the [Java code](https://github.com/coralblocks/JavaToCppAndBack/blob/main/src/main/java/com/coralblocks/javatocppandback/jni_callback/CallbackFromJava.java)
 - Check the [C++ code](https://github.com/coralblocks/JavaToCppAndBack/blob/main/src/main/c/com_coralblocks_javatocppandback_jni_callback_CallbackFromJava.cpp) that calls Java
 - Check the [C++ code](https://github.com/coralblocks/JavaToCppAndBack/blob/main/src/main/c/com_coralblocks_javatocppandback_jni_callback_CallbackFromJavaSharedLib.cpp) that receives the callbacks from Java
