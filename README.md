@@ -6,43 +6,44 @@ This project is intended to be used as a quick reference on how to get going wit
 #### MacOS
 ```
 $ uname -a
-Darwin MacBook-Air.local 22.4.0 Darwin Kernel Version 22.4.0: Mon Mar  6 21:01:02 PST 2023; root:xnu-8796.101.5~3/RELEASE_ARM64_T8112 arm64
+Darwin MacBook-Air.local 22.6.0 Darwin Kernel Version 22.6.0: Wed Jul  5 22:17:35 PDT 2023; root:xnu-8796.141.3~6/RELEASE_ARM64_T8112 arm64
 
 $ java -version
-openjdk version "19.0.2" 2023-01-17
-OpenJDK Runtime Environment GraalVM CE 22.3.1 (build 19.0.2+7-jvmci-22.3-b12)
-OpenJDK 64-Bit Server VM GraalVM CE 22.3.1 (build 19.0.2+7-jvmci-22.3-b12, mixed mode, sharing)
+java version "21.0.1" 2023-10-17
+Java(TM) SE Runtime Environment Oracle GraalVM 21.0.1+12.1 (build 21.0.1+12-jvmci-23.1-b19)
+Java HotSpot(TM) 64-Bit Server VM Oracle GraalVM 21.0.1+12.1 (build 21.0.1+12-jvmci-23.1-b19, mixed mode, sharing)
 
 $ clang++ --version
 Apple clang version 14.0.3 (clang-1403.0.22.14.1)
-Target: arm64-apple-darwin22.4.0
+Target: arm64-apple-darwin22.6.0
 Thread model: posix
 InstalledDir: /Library/Developer/CommandLineTools/usr/bin
 
 $ native-image --version
-GraalVM 22.3.1 Java 19 CE (Java Version 19.0.2+7-jvmci-22.3-b12)
+native-image 21.0.1 2023-10-17
+GraalVM Runtime Environment Oracle GraalVM 21.0.1+12.1 (build 21.0.1+12-jvmci-23.1-b19)
+Substrate VM Oracle GraalVM 21.0.1+12.1 (build 21.0.1+12, serial gc, compressed references)
 ```
 #### Linux
 ```
 $ uname -a
-Linux cleveland 5.15.0-71-generic #78-Ubuntu SMP Tue Apr 18 09:00:08 UTC 2023 aarch64 aarch64 aarch64 GNU/Linux
-
-$ cat /etc/issue | head -n 1
-Ubuntu 22.04.2 LTS \n \l
+Linux cleveland 5.15.0-72-generic #79-Ubuntu SMP Tue Apr 18 16:53:43 UTC 2023 aarch64 aarch64 aarch64 GNU/Linux
 
 $ java -version
-openjdk version "19.0.2" 2023-01-17
-OpenJDK Runtime Environment GraalVM CE 22.3.1 (build 19.0.2+7-jvmci-22.3-b12)
-OpenJDK 64-Bit Server VM GraalVM CE 22.3.1 (build 19.0.2+7-jvmci-22.3-b12, mixed mode, sharing)
+java version "21.0.1" 2023-10-17
+Java(TM) SE Runtime Environment Oracle GraalVM 21.0.1+12.1 (build 21.0.1+12-jvmci-23.1-b19)
+Java HotSpot(TM) 64-Bit Server VM Oracle GraalVM 21.0.1+12.1 (build 21.0.1+12-jvmci-23.1-b19, mixed mode, sharing)
 
 $ clang++ --version
-Ubuntu clang version 14.0.0-1ubuntu1
+Ubuntu clang version 14.0.0-1ubuntu1.1
 Target: aarch64-unknown-linux-gnu
 Thread model: posix
 InstalledDir: /usr/bin
 
 $ native-image --version
-GraalVM 22.3.1 Java 19 CE (Java Version 19.0.2+7-jvmci-22.3-b12)
+native-image 21.0.1 2023-10-17
+GraalVM Runtime Environment Oracle GraalVM 21.0.1+12.1 (build 21.0.1+12-jvmci-23.1-b19)
+Substrate VM Oracle GraalVM 21.0.1+12.1 (build 21.0.1+12, serial gc, compressed references)
 ```
 
 ## Java calling C++
