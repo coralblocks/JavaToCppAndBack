@@ -119,6 +119,32 @@ Hello CoralBlocks from JNR! => Awesome
 Hello CoralBlocks from JNR! => Awesome
 ```
 
+### [FFM](https://docs.oracle.com/en/java/javase/21/core/foreign-function-and-memory-api.html)
+###### (Thanks to [Steven Curran](https://github.com/StevenCurran))
+- Check the [Java code](https://github.com/coralblocks/JavaToCppAndBack/blob/main/src/main/java/com/coralblocks/javatocppandback/ffm/HelloWorld.java)
+- Check the [C++ code](https://github.com/coralblocks/JavaToCppAndBack/blob/main/src/main/c/com_coralblocks_javatocppandback_ffm_HelloWorld.cpp)
+###### MacOS
+- [Compile](https://github.com/coralblocks/JavaToCppAndBack/blob/main/bin/mac/ffm/compileJava.sh) the Java code
+- [Compile](https://github.com/coralblocks/JavaToCppAndBack/blob/main/bin/mac/ffm/compileCpp.sh) the C++ code
+- [Run](https://github.com/coralblocks/JavaToCppAndBack/blob/main/bin/mac/ffm/runJava.sh) the Java code
+```
+# For Mac
+$ ./bin/mac/ffm/all.sh 2 Awesome
+Hello CoralBlocks from FFM! => Awesome
+Hello CoralBlocks from FFM! => Awesome
+```
+###### Linux
+- [Compile](https://github.com/coralblocks/JavaToCppAndBack/blob/main/bin/linux/ffm/compileJava.sh) the Java code
+- [Compile](https://github.com/coralblocks/JavaToCppAndBack/blob/main/bin/linux/ffm/compileCpp.sh) the C++ code
+- [Run](https://github.com/coralblocks/JavaToCppAndBack/blob/main/bin/linux/ffm/runJava.sh) the Java code
+```
+# For Linux
+$ ./bin/linux/ffm/all.sh 2 Awesome
+Hello CoralBlocks from FFM! => Awesome
+Hello CoralBlocks from FFM! => Awesome
+```
+
+
 ## C++ calling Java
 
 ### [JNI](https://docs.oracle.com/javase/8/docs/technotes/guides/jni/spec/invocation.html)
