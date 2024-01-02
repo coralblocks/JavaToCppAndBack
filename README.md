@@ -144,7 +144,19 @@ $ ./bin/linux/ffm/all.sh 2 Awesome
 Hello CoralBlocks from FFM! => Awesome
 Hello CoralBlocks from FFM! => Awesome
 ```
-
+### [FFM with jextract](https://github.com/openjdk/jextract)
+- Check the [Java code](https://github.com/coralblocks/JavaToCppAndBack/blob/main/src/main/java/com/coralblocks/javatocppandback/ffm_jextract/HelloWorld.java)
+- Check the [C++ code](https://github.com/coralblocks/JavaToCppAndBack/blob/main/src/main/c/com_coralblocks_javatocppandback_ffm_jextract_HelloWorld.cpp)
+###### MacOS
+- [Compile](https://github.com/coralblocks/JavaToCppAndBack/blob/main/bin/mac/ffm_jextract/compileJava.sh) the Java code
+- [Compile](https://github.com/coralblocks/JavaToCppAndBack/blob/main/bin/mac/ffm_jextract/compileCpp.sh) the C++ code
+- [Run](https://github.com/coralblocks/JavaToCppAndBack/blob/main/bin/mac/ffm_jextract/runJava.sh) the Java code
+```
+# For Mac
+$ ./bin/mac/ffm_jextract/all.sh 2 Awesome
+Hello CoralBlocks from FFM! => Awesome
+Hello CoralBlocks from FFM! => Awesome
+```
 
 ## C++ calling Java
 
