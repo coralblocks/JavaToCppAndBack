@@ -23,6 +23,11 @@ $ native-image --version
 native-image 21.0.1 2023-10-17
 GraalVM Runtime Environment Oracle GraalVM 21.0.1+12.1 (build 21.0.1+12-jvmci-23.1-b19)
 Substrate VM Oracle GraalVM 21.0.1+12.1 (build 21.0.1+12, serial gc, compressed references)
+
+$ jextract --version
+jextract 21
+JDK version 21.0.1+12-LTS-29
+Apple clang version 14.0.3 (clang-1403.0.22.14.1)
 ```
 #### Linux
 ```
@@ -44,6 +49,11 @@ $ native-image --version
 native-image 21.0.1 2023-10-17
 GraalVM Runtime Environment Oracle GraalVM 21.0.1+12.1 (build 21.0.1+12-jvmci-23.1-b19)
 Substrate VM Oracle GraalVM 21.0.1+12.1 (build 21.0.1+12, serial gc, compressed references)
+
+$ jextract --version
+jextract 21
+JDK version 21.0.1+12-jvmci-23.1-b19
+Ubuntu clang version 14.0.0-1ubuntu1.1
 ```
 
 ## Java calling C++
