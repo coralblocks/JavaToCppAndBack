@@ -1,5 +1,5 @@
 # JavaToCppAndBack
-Call Java from C++ and C++ from Java with a variety of old and new projects like JNI, JNA, JNR, FFM, GraalVM, JNI-Bind, etc.
+Call Java from C++ and C++ from Java with a variety of old and new projects like JNI, JNA, JNR, FFM, JExtract, GraalVM, JNI-Bind, etc.
 
 This project is intended to be used as a quick reference on how to get going with Java and C++ integration, from both sides. It is a _step-by-step_ guide, in the form of shell scripts (for Linux and MacOS) to compile and run the C++ and Java examples, so you don't have to guess anything. Just see "_Hello World!_" popping up in your terminal to celebrate! :champagne: :tada: :confetti_ball:
 
@@ -145,6 +145,32 @@ Hello CoralBlocks from FFM! => Awesome
 Hello CoralBlocks from FFM! => Awesome
 ```
 
+### [JExtract](https://github.com/openjdk/jextract)
+- Check the [Java code](https://github.com/coralblocks/JavaToCppAndBack/blob/main/src/main/java/com/coralblocks/javatocppandback/ffm_jextract/HelloWorld.java)
+- Check the [C++ header](https://github.com/coralblocks/JavaToCppAndBack/blob/main/src/main/c/com_coralblocks_javatocppandback_ffm_jextract_HelloWorld.h)
+- Check the [C++ code](https://github.com/coralblocks/JavaToCppAndBack/blob/main/src/main/c/com_coralblocks_javatocppandback_ffm_jextract_HelloWorld.cpp)
+###### MacOS
+- [Compile](https://github.com/coralblocks/JavaToCppAndBack/blob/main/bin/mac/ffm_jextract/compileCpp.sh) the C++ code
+- [Generate](https://github.com/coralblocks/JavaToCppAndBack/blob/main/bin/mac/ffm_jextract/generateJava.sh) the Java code
+- [Compile](https://github.com/coralblocks/JavaToCppAndBack/blob/main/bin/mac/ffm_jextract/compileJava.sh) the Java code
+- [Run](https://github.com/coralblocks/JavaToCppAndBack/blob/main/bin/mac/ffm_jextract/runJava.sh) the Java code
+```
+# For Mac
+$ ./bin/mac/ffm_jextract/all.sh 2 Awesome
+Hello CoralBlocks from JExtract! => Awesome
+Hello CoralBlocks from JExtract! => Awesome
+```
+###### Linux
+- [Compile](https://github.com/coralblocks/JavaToCppAndBack/blob/main/bin/linux/ffm_jextract/compileCpp.sh) the C++ code
+- [Generate](https://github.com/coralblocks/JavaToCppAndBack/blob/main/bin/linux/ffm_jextract/generateJava.sh) the Java code
+- [Compile](https://github.com/coralblocks/JavaToCppAndBack/blob/main/bin/linux/ffm_jextract/compileJava.sh) the Java code
+- [Run](https://github.com/coralblocks/JavaToCppAndBack/blob/main/bin/linux/ffm_jextract/runJava.sh) the Java code
+```
+# For Linux
+$ ./bin/linux/ffm_jextract/all.sh 2 Awesome
+Hello CoralBlocks from JExtract! => Awesome
+Hello CoralBlocks from JExtract! => Awesome
+```
 
 ## C++ calling Java
 
